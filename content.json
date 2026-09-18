@@ -212,47 +212,61 @@
 
 
           "relics": [
-            {
-              "id": "relic_1",
-              "name": "The Ember Sword",
-              "type": "Weapon",
-              "icon_id": "#icon-sword",
-              "description": "A blade forged from the heart of a fallen star, radiating a warm, eternal heat. It cuts through both physical armor and magical darkness."
-            },
-            {
-              "id": "relic_2",
-              "name": "Tears of Eldoria",
-              "type": "Magic Potion",
-              "icon_id": "#icon-potion",
-              "description": "Distilled from the sap of the World Tree under a full moon. A single drop can mend fatal wounds and restore shattered memories."
-            },
-            {
-              "id": "relic_3",
-              "name": "Arrow of Aries",
-              "type": "Projectile",
-              "icon_id": "#icon-arrow",
-              "description": "Blessed by the Ram constellation, this arrow never misses its mark and returns to the archer's quiver upon striking its target."
-            },
-            {
-              "id": "relic_4",
-              "name": "Crown of the Fallen",
-              "type": "Artifact",
-              "icon_id": "#icon-crown",
-              "description": "A heavy golden circlet that grants the wearer dominion over the spirits of past kings, at the cost of their own sanity."
-            },
-            {
-              "id": "relic_5",
-              "name": "Shield of the World Tree",
-              "type": "Defense",
-              "icon_id": "#icon-shield",
-              "description": "Carved from the bark of the First Oak. It absorbs magical impact and redistributes it into the earth, granting supreme stability."
-            },
-            {
-              "id": "relic_6",
-              "name": "Amulet of Whispers",
-              "type": "Accessory",
-              "icon_id": "#icon-amulet",
-              "description": "An intricate silver pendant that translates the silent language of nature, allowing the wearer to speak with the flora and fauna of the realm."
-            }
-          ]
+  {
+    "id": "relic_1",
+    "name": "The Vessel of Elixir",
+    "type": "Artifact",
+    "icon_id": "#icon-potion",
+    "image_url": "https://images.unsplash.com/photo-1513689125086-6c432170e843?q=80&w=800&auto=format&fit=crop",
+    "description": "A glowing vessel obtained from Herald in the deepest lava chambers of Sönghellir cave. It contains the shimmering liquid of immortality, which Adonis poured onto his own foot to shatter Einar's ego and prove his greatness."
+  },
+  {
+    "id": "relic_2",
+    "name": "The Sacred Flower of Swēoland",
+    "type": "Memento",
+    "icon_id": "#icon-flower",
+    "image_url": "https://images.unsplash.com/photo-1496062031456-07b8f162a322?q=80&w=800&auto=format&fit=crop",
+    "description": "A delicate bloom brought back from Adonis's victorious seventh battle. He left it resting on King Ares's pillow as a silent, heartbreaking farewell before venturing into the deadly cold of Norge."
+  },
+  {
+    "id": "relic_3",
+    "name": "The Royal Treasury Map",
+    "type": "Document",
+    "icon_id": "#icon-scroll",
+    "image_url": "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=800&auto=format&fit=crop",
+    "description": "An ancient parchment stolen from the deepest vaults of Norge. It charts the treacherous, agonizing path through the mourning Norskahavið sea to the hidden Isle of Garðar."
+  },
+  {
+    "id": "relic_4",
+    "name": "Bjorn's Fallen Blade",
+    "type": "Weapon",
+    "icon_id": "#icon-sword",
+    "image_url": "https://images.unsplash.com/photo-1589149098258-3e91346af7dc?q=80&w=800&auto=format&fit=crop",
+    "description": "The mighty sword of Bjorn, which sliced through almost thirty cursed soldiers in the Forest of the Dead before his tragic demise. It stands as the ultimate symbol of brotherhood, loyalty, and sacrifice."
+  },
+  {
+    "id": "relic_5",
+    "name": "Iris's Golden-Hilted Sword",
+    "type": "Weapon",
+    "icon_id": "#icon-sword",
+    "image_url": "https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=800&auto=format&fit=crop",
+    "description": "The regal blade carried by Iris, Chief of Nólsoy on the Faroe Island. It represents the fierce protection of her village and the deep, emotional bond of understanding she formed with the weary Prince Adonis."
+  },
+  {
+    "id": "relic_6",
+    "name": "Mephisto's Cursed Steel",
+    "type": "Weapon",
+    "icon_id": "#icon-sword",
+    "image_url": "https://images.unsplash.com/photo-1590419690008-905895e8fd0d?q=80&w=800&auto=format&fit=crop",
+    "description": "The weapon wielded by the immortal general of the dead army. It clashed against Adonis's sword like striking lightning before its master was brought to his knees and forced to guide the Norge warriors."
+  },
+  {
+    "id": "relic_7",
+    "name": "Spores of Sönghellir",
+    "type": "Material",
+    "icon_id": "#icon-crystal",
+    "image_url": "https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=800&auto=format&fit=crop",
+    "description": "Bioluminescent fungi harvested from the eerie depths of the singing cave. They cast a haunting, ethereal blue glow and resonate with the mystical flute-like winds of the underground abyss."
+  }
+]
         }
