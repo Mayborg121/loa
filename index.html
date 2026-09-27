@@ -796,7 +796,7 @@
         /**
          * 2. EXPANDED NATIVE AUDIO SYNTHESIS ENGINE
          */
-        class MythologyAudioEngine {
+         class MythologyAudioEngine {
             constructor() {
                 this.ctx = null;
                 this.muted = false;
@@ -806,6 +806,19 @@
                 this.droneGain = null;
                 this.droneFilter = null;
                 this.droneLfo = null;
+                
+                // --- ENVIRONMENT AUDIO TRACKS ---
+                // 1. Rain and Thunder
+                this.bgRain = new Audio("https://actions.google.com/sounds/v1/weather/thunderstorm.ogg");
+                this.bgRain.loop = true;
+                this.bgRain.volume = 0; // Starts at 0 for smooth fade-in
+                
+                // 2. Bird Noises (Replace with a local file like "./birds.mp3" if you prefer)
+                this.bgBirds = new Audio("https://actions.google.com/sounds/v1/animals/sparrows_chirping.ogg");
+                this.bgBirds.loop = true;
+                this.bgBirds.volume = 0; 
+                
+                this.fadeInterval = null;
                 
                 const unlock = () => {
                     if (!this.unlocked && !this.muted) {
@@ -831,45 +844,59 @@
                         this.unlocked = true; 
                         this.startAmbientDrone();
                     });
-                } else if (this.muted && this.droneGain) {
-                    this.droneGain.gain.linearRampToValueAtTime(0, this.ctx.currentTime + 0.5);
-                } else if (!this.muted && this.droneGain) {
-                    this.droneGain.gain.linearRampToValueAtTime(0.05, this.ctx.currentTime + 1);
+                } else if (this.muted) {
+                    this.fadeAudio(0, 0); // Fade both out to 0
+                } else if (!this.muted) {
+                    this.bgRain.play().catch(e => console.log(e));
+                    this.bgBirds.play().catch(e => console.log(e));
+                    // VOLUME MIX: 0.8 is 80% for Rain, 0.4 is 40% for Birds
+                    this.fadeAudio(0.8, 0.4); 
                 }
             }
 
             startAmbientDrone() {
-                if(this.muted || !this.unlocked || !this.ctx || this.droneOsc) return;
+                if(this.muted || !this.unlocked) return;
                 
-                this.droneOsc = this.ctx.createOscillator();
-                this.droneOsc.type = 'sawtooth';
-                this.droneOsc.frequency.value = 55;
+                // Play both tracks
+                this.bgRain.play().catch(err => console.log("Playback prevented:", err));
+                this.bgBirds.play().catch(err => console.log("Playback prevented:", err));
                 
-                this.droneFilter = this.ctx.createBiquadFilter();
-                this.droneFilter.type = 'lowpass';
-                this.droneFilter.frequency.value = 200;
-                this.droneFilter.Q.value = 5;
+                // VOLUME MIX: 0.8 is 80% for Rain, 0.4 is 40% for Birds
+                this.fadeAudio(0.8, 0.4); 
+            }
+            
+            // Custom smooth fader to handle multiple tracks at different volume levels
+            fadeAudio(targetRainVol, targetBirdVol) {
+                if (this.fadeInterval) clearInterval(this.fadeInterval);
                 
-                this.droneLfo = this.ctx.createOscillator();
-                this.droneLfo.type = 'sine';
-                this.droneLfo.frequency.value = 0.1;
-                
-                const lfoGain = this.ctx.createGain();
-                lfoGain.gain.value = 150;
-                
-                this.droneGain = this.ctx.createGain();
-                this.droneGain.gain.value = 0;
-                
-                this.droneLfo.connect(lfoGain);
-                lfoGain.connect(this.droneFilter.frequency);
-                this.droneOsc.connect(this.droneFilter);
-                this.droneFilter.connect(this.droneGain);
-                this.droneGain.connect(this.ctx.destination);
-                
-                this.droneOsc.start();
-                this.droneLfo.start();
-                
-                this.droneGain.gain.linearRampToValueAtTime(0.05, this.ctx.currentTime + 5);
+                this.fadeInterval = setInterval(() => {
+                    let rainCurrent = this.bgRain.volume;
+                    let birdCurrent = this.bgBirds.volume;
+                    
+                    let rainDone = Math.abs(rainCurrent - targetRainVol) < 0.02;
+                    let birdDone = Math.abs(birdCurrent - targetBirdVol) < 0.02;
+
+                    // If both tracks have reached their target volumes
+                    if (rainDone && birdDone) {
+                        this.bgRain.volume = targetRainVol;
+                        this.bgBirds.volume = targetBirdVol;
+                        
+                        if (targetRainVol === 0) {
+                            this.bgRain.pause();
+                            this.bgBirds.pause();
+                        }
+                        clearInterval(this.fadeInterval);
+                    } else {
+                        // Fade Rain
+                        if (!rainDone) {
+                            this.bgRain.volume = rainCurrent < targetRainVol ? Math.min(rainCurrent + 0.02, 1) : Math.max(rainCurrent - 0.02, 0);
+                        }
+                        // Fade Birds
+                        if (!birdDone) {
+                            this.bgBirds.volume = birdCurrent < targetBirdVol ? Math.min(birdCurrent + 0.02, 1) : Math.max(birdCurrent - 0.02, 0);
+                        }
+                    }
+                }, 100);
             }
 
             playHover() {
