@@ -242,7 +242,7 @@
     "name": "The Vessel of Elixir",
     "type": "Artifact",
     "icon_id": "#icon-potion",
-    "image_url": "https://raw.githubusercontent.com/Mayborg121/loa/blob/87c27adb1933feb030966ae7de15cc21c2c60783/potion.jpg",
+    "image_url": "https://github.com/Mayborg121/loa/blob/main/potion.jpg?raw=true",
     "description": "A glowing vessel obtained from Herald in the deepest lava chambers of Sönghellir cave. It contains the shimmering liquid of immortality, which Adonis poured onto his own foot to shatter Einar's ego and prove his greatness."
   },
   {
@@ -250,7 +250,7 @@
     "name": "The Crown of King Ares",
     "type": "Artifact",
     "icon_id": "#icon-crown",
-    "image_url": "https://github.com/Mayborg121/loa/blob/main/potion.jpg?raw=true",
+    "image_url": "https://github.com/Mayborg121/loa/blob/main/relic_crown.jpg?raw=true",
     "description": "The royal crown of Norge, left vulnerable to treacherous ministers after King Ares passed away. It was eventually reclaimed by Adonis when he returned to establish an era of peace as King Adonis The Great."
   },
   {
@@ -266,7 +266,7 @@
     "name": "Iris's Golden-Hilted Sword",
     "type": "Weapon",
     "icon_id": "#icon-sword",
-    "image_url": "https://raw.githubusercontent.com/Mayborg121/loa/blob/87c27adb1933feb030966ae7de15cc21c2c60783/iris_sword.jpg",
+    "image_url": "https://github.com/Mayborg121/loa/blob/main/iris_sword.jpg?raw=true",
     "description": "The regal blade carried by Iris, Chief of Nólsoy on the Faroe Island. It represents the fierce protection of her village and the deep, emotional bond of understanding she formed with the weary Prince Adonis."
   },
   {
@@ -274,7 +274,7 @@
     "name": "Mephisto's Cursed Steel",
     "type": "Weapon",
     "icon_id": "#icon-sword",
-    "image_url": "https://github.com/Mayborg121/loa/blob/main/iris_sword.jpg?raw=true",
+    "image_url": "https://github.com/Mayborg121/loa/blob/main/cursed_sword.jpg?raw=true",
     "description": "The weapon wielded by the immortal general of the dead army. It clashed against Adonis's sword like striking lightning before its master was brought to his knees and forced to guide the Norge warriors."
   },
   {
