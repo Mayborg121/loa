@@ -30,9 +30,9 @@
               "has_poem": true,
               "poem": {
                 "title": "Song of Rising Sun",
-                "stanzas": [
-                  "Voyage of thousand miles, Through snow, brine and pines, Arduous journey to immortality, To Isle of Gardar’s Shrines. ",
-                  "O’ Adonis, son of King Ares, Fighting Evil, devil and furies, He Holds the courage to walk, Alone on the path of glory… "
+                "stanzas": [ 
+                  "Voyage of thousand miles,\n Through snow, brine and pines,\n Arduous journey to immortality,\n To Isle of Gardar’s Shrines. ",
+                  "O’ Adonis, son of King Ares,\n Fighting Evil, devil and furies,\n He Holds the courage to walk,\n Alone on the path of glory… "
                 ]
               }
             },
@@ -66,8 +66,9 @@
               "poem": {
                 "title": "Song of Rising Sun",
                 "stanzas": [
-                  "A trek across harsh, unforgiving desert. Even greatest of men afraid to start. Voyager of the greatest voyage, Never keeps a small heart.",
-                  "A journey through furious sea, Men toasted wine, rum and tea. With courage they crossed hell, Sobbing sea wailing eerie knell.","Faroe’s Island came to sight, Warriors had relief that night Their battered ship, found a shore. Their grueling odyssey ended in lore."
+                  "A trek across harsh, unforgiving desert.\n Even greatest of men afraid to start.\n Voyager of the greatest voyage,\n Never keeps a small heart.",
+                  "A journey through furious sea,\n Men toasted wine, rum and tea.\n With courage they crossed hell,\n Sobbing sea wailing eerie knell.",
+				  "Faroe’s Island came to sight,\n Warriors had relief at that night\n Their battered ship, found a shore.\n Their grueling odyssey ended in lore."
 				  ]
             }
 			},
@@ -96,9 +97,9 @@
               "poem": {
                 "title": "Echoes of the Crown",
                 "stanzas": [
-                  "Beneath the cloudy, darkened sky, Faroe Island draws a sigh. Greenery lush and waters blue, A paradise in men’s view. ",
-                  "Soon they meet a troop of men, Led by a brave, bold women. Horns of warning in the air, Positions taken with great care. ",
-                  "Her golden sword, merciful and moral; To Adonis, she offered a welcome floral. Strangers now in bonds that tie, Together beneath that darkened sky. "
+                  "Beneath the cloudy, darkened sky,\n Faroe Island draws a sigh.\n Greenery lush and waters blue,\n A paradise in men’s view. ",
+                  "Soon they meet a troop of men,\n Led by a brave, bold women.\n Horns of warning in the air,\n Positions taken with great care. ",
+                  "Her golden sword, merciful and moral;\n To Adonis, she offered a welcome floral.\n Strangers now in bonds that tie,\n Together beneath that darkened sky. "
                 ]
               }
             },
@@ -137,10 +138,10 @@
               "poem": {
                 "title": "Echoes of the Crown",
                 "stanzas": [
-                  "The Forest of Dead, Mephisto’s curse. walking through dark and worse. warriors fought with dead immortals, through bravery they opened hell’s portal. ",
-                  "Despite fierce fighting, lives were lost. On both the ends, one them was a good friend, Adonis’s saw his brother die, He deemed revenge and fury in his eye. ",
-                  "With great vengeance and flaming revenge, He brought the enemy on this blade’s edge. Nemesis begged for mercy, forgiveness. Adonis offered cold death, then recess.",
-                  "Mercy was given, Mephisto was tamed. He offered his loyalty in exchange. Adonis mourned to Bjorn’s death, Mephisto gave him Aid and strength."
+                  "The Forest of Dead, Mephisto’s curse.\n walking through dark and worse.\n warriors fought with dead immortals,\n through bravery they opened hell’s portal. ",
+                  "Despite fierce fighting, lives were lost.\n On both the ends, one them was a good friend,\n Adonis’s saw his brother die,\n He deemed revenge and fury in the eye. ",
+                  "With great vengeance and flaming revenge,\n He brought the enemy on this blade’s edge.\n Nemesis begged for mercy, forgiveness.\n Adonis offered cold death, then recess.",
+                  "Mercy was given, Mephisto was tamed.\n He offered his loyalty in exchange.\n Adonis mourned to Bjorn’s death,\n Mephisto gave him Aid and strength."
 				]
 			}
 			},
